@@ -40,3 +40,21 @@ void loop_vector_w_index()
 	}
 }
 
+void loop_string_w_index(std::string str)
+{
+}
+
+void loop_string_w_auto(std::string str, std::string & str1)
+{
+	for (auto ch : str)
+	{
+		ch = 'j';
+		std::cout << ch << "\n";
+	}
+
+	for (auto ch : str1)
+	{
+		ch = 'j';
+		std::cout << ch << "\n";
+	}
+}

@@ -6,3 +6,8 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
+TEST_CASE("Test while loop factorial of num")
+{
+	REQUIRE(function_factorial(5) == 120);
+	REQUIRE(function_factorial(3) == 6);
+}

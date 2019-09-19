@@ -1,4 +1,5 @@
 //write include statements for string and vector
+#include<iostream>
 
 
 /*

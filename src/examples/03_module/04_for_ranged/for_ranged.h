@@ -1,10 +1,12 @@
 #include<string>
 #include<vector>
 
+using std::string;
+
 //write a void function prototype for loop_string_w_index that accepts a string parameter
-void loop_string_w_index(std::string str);
+void loop_string_w_index(string str);
 
 
 //write a void function prototype for loop_string_w_auto  that accepts a string parameter
-void loop_string_w_auto(std::string str);
+void loop_string_w_auto(string str);
 

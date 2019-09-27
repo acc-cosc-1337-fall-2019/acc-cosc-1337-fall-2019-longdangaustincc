@@ -1,4 +1,5 @@
 #include "dna.h"
+
 /*
 Write code for function get_gc_content that accepts
 a const reference string parameter and returns a double.
@@ -6,15 +7,31 @@ Calculate GC content:
 Iterate string count Gs and Cs, divide count by string length.
 Return quotient.
 */
-
-
-
+double get_gc_content(const string & dna)
+{
+	double dna_length = dna.size();
+	double gc_count = 0;
+	int i = 0;
+	while (i < dna.size())
+	{
+		if (dna[i] == 'G' || dna[i] == 'C')
+		{
+			gc_count++;
+		}
+		i++;
+	}
+	return gc_count / dna_length;
+}
 
 /*
 Write code for function get_reverse_string that
 accepts a string parameter and returns a string reversed.
 */
+string get_reverse_string(string dna)
+{
 
+	return string();
+}
 
 
 /*

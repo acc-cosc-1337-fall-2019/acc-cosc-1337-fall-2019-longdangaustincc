@@ -24,5 +24,4 @@ string menu(int menu_option)
 	default:
 		return "Invalid";
 	}
-	return string();
 }

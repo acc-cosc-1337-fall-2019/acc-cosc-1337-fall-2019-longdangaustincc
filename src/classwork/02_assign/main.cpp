@@ -1,5 +1,5 @@
 //Write the include statement for decisions.h here
-#include "decisions.h"
+#include "calculations.h"
 //Write include for capturing input from keyboard and displaying output to screen
 #include <iostream>
 

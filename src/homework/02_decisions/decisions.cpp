@@ -15,7 +15,7 @@ int get_grade_points(std::string letter_grade)
 	{
 		return 4;
 	}
-	else if(letter_grade == "B") 
+	else if (letter_grade == "B") 
 	{
 		return 3;
 	}
@@ -37,6 +37,64 @@ int get_grade_points(std::string letter_grade)
 	}
 }
 
+string get_letter_grade_using_if(int grade)
+{
+	if (grade >= 90 && grade <= 100)
+	{
+		return "A";
+	}
+	else if (grade >= 80 && grade <= 89)
+	{
+		return "B";
+	}
+	else if (grade >= 70 && grade <= 79)
+	{
+		return "C";
+	}
+	else if (grade >= 60 && grade <= 69)
+	{
+		return "D";
+	}
+	else if (grade >= 00 && grade <= 59)
+	{
+		return "F";
+	}
+	else
+	{
+		return "Invalid";
+	}
+}
+
+string get_letter_grade_using_switch(int grade)
+{
+	switch (grade/10)
+	{
+	case 10:
+		return "A";
+	case 9:
+		return "A";
+	case 8:
+		return "B";
+	case 7:
+		return "C";
+	case 6:
+		return "D";
+	case 5:
+		return "F";
+	case 4:
+		return "F";
+	case 3:
+		return "F";
+	case 2:
+		return "F";
+	case 1:
+		return "F";
+	case 0:
+		return "F";
+	default:
+		return "Invalid";
+	}
+}
 
 //Write code for function calculate_gpa that accepts an int named credit_hours and
 //a double named credit_points.  The function returns the quotient of credit_points divided by

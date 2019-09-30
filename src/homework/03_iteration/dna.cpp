@@ -1,4 +1,7 @@
 #include "dna.h"
+#include <iostream>
+
+using std::cout;
 
 /*
 Write code for function get_gc_content that accepts
@@ -9,16 +12,15 @@ Return quotient.
 */
 double get_gc_content(const string & dna)
 {
-	double dna_length = dna.size();
+	double dna_length = dna.length();
 	double gc_count = 0;
-	int i = 0;
-	while (i < dna.size())
+
+	for (int i = 0; i < dna.length(); ++i)
 	{
 		if (dna[i] == 'G' || dna[i] == 'C')
 		{
-			gc_count++;
+			++gc_count;
 		}
-		i++;
 	}
 	return gc_count / dna_length;
 }
@@ -29,8 +31,13 @@ accepts a string parameter and returns a string reversed.
 */
 string get_reverse_string(string dna)
 {
+	string reverse_dna;
 
-	return string();
+	for (int i = dna.length() - 1; i > -1; --i)
+	{
+		reverse_dna = reverse_dna + dna[i];
+	}
+	return reverse_dna;
 }
 
 
@@ -44,4 +51,35 @@ b. iterate local string variable and
 c. return string
 
 */
+string get_dna_complement(string dna)
+{
+	string complete_dna = get_reverse_string(dna);
+	int i = 0;
 
+	while (i < complete_dna.length())
+	{
+		if (complete_dna[i] == 'A')
+		{
+			complete_dna[i] = 'T';
+		}
+		else if (complete_dna[i] == 'T')
+		{
+			complete_dna[i] = 'A';
+		}
+		else if (complete_dna[i] == 'C')
+		{
+			complete_dna[i] = 'G';
+		}
+		else if (complete_dna[i] == 'G')
+		{
+			complete_dna[i] = 'C';
+		}
+		else
+		{
+			return "Invalid";
+		}
+		return complete_dna;
+	}
+
+	return string();
+}

@@ -54,7 +54,7 @@ void loop_string_w_auto(std::string str, std::string & str1)
 
 	for (auto ch : str1)
 	{
-		ch = 'j';
+		ch = 'i';
 		std::cout << ch << "\n";
 	}
 }

@@ -59,7 +59,7 @@ Write code for function loop_vector_w_index with a vector of int const pass by r
 The function creates an int vector with values 9, 10, 99, 5, 67
 and displays the numbers to screen using an indexed for loop as follows : 9 10 99 5  67
 */
-void loop_vector_w_index_conts(const std::vector<int> & nums)
+void loop_vector_w_index_const(const std::vector<int> & nums)
 {
 	for (int i = 0; i < nums.size(); i++)
 	{
@@ -84,3 +84,11 @@ void loop_vector_w_for_ranged_ref_var(std::vector <int> & nums)
 		std::cout << num << "\n";
 	}
 }
+
+std::vector<int> ret_vec_int()
+{
+	std::vector<int> my_vector(9, 2);
+	my_vector.push_back(3);
+	return my_vector;
+}
+

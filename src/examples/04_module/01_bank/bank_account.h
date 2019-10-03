@@ -3,8 +3,10 @@ class  BankAccount
 {
 public:
 	BankAccount();
+	BankAccount(int b) : balance(b) {}; //inline constructor
 	void deposit(int amount);
-	int get_balance();
+	void withdraw(int amount);
+	int get_balance() const;
 
 private:
 	int balance;

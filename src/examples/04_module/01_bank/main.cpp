@@ -1,5 +1,5 @@
 #include <iostream>
-#include "bank_account.h"
+#include "atm.h"
 #include <vector>
 
 using std::cout;
@@ -7,14 +7,13 @@ using std::vector;
 
 int main()
 {
-	vector <BankAccount> accounts;
-	BankAccount b1;
-	accounts.push_back(b1); // create a bank account name b1 with default $ in balance
-	accounts.push_back(BankAccount(750)); // create a bank account with $750 in balance
+	//scan card and enter pin
+	//get record from database into a vector
+	vector <BankAccount> accounts{ BankAccount(500), BankAccount(600), BankAccount(1000) }; //this is just a mimic of the data base
+	ATM atm(accounts[0]);
+	atm.deposit(100);
+	atm.withdraw(50);
+	atm.display_balance();
 
-	for (auto account : accounts)
-	{
-		cout << "Balance: " << account.get_balance();
-	}
 	return 0;
 }

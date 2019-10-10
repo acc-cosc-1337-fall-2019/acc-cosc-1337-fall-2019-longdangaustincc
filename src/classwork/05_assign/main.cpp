@@ -5,7 +5,7 @@
 
 using std::vector;
 using std::cout;
-
+using std::cin;
 /*
 Create a vector of rectangles
 Add 3 Rectangle classes to the vector:
@@ -23,9 +23,10 @@ int main()
 	rectangles.push_back(acc::Rectangle(10, 10));
 	rectangles.push_back(acc::Rectangle(100, 10));
 
-	for (auto rectangle : rectangles)
+	for (auto rec : rectangles)
 	{
-		cout << "area: " << rectangle.get_area();
+		cout << rec;
 	}
+
 	return 0;
 }

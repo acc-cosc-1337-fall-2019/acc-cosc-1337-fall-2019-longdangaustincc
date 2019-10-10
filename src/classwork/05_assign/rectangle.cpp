@@ -1,4 +1,6 @@
 #include "rectangle.h"
+#include <iostream>
+
 //Write include statement
 
 
@@ -16,3 +18,11 @@ int acc::Rectangle::get_area() const
 {
 	return area;
 }
+
+std::ostream & acc::operator<<(std::ostream & out, const Rectangle & a)
+{
+	out << "The area is: " << a.area << "\n";
+
+	return out;
+}
+

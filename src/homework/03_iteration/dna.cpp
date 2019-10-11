@@ -78,8 +78,9 @@ string get_dna_complement(string dna)
 		{
 			return "Invalid";
 		}
-		return complete_dna;
+
+		++i;
 	}
 
-	return string();
+	return complete_dna;
 }

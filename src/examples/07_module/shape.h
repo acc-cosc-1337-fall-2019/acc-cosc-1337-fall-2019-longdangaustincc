@@ -6,7 +6,7 @@
 class Shape
 {
 public:
-	virtual void draw() {}
+	virtual void draw() = 0;  //pure virtual function, abstract class
 
 };
 #endif SHAPE_H

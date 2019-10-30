@@ -6,6 +6,6 @@
 class Line : public Shape
 {
 public:
-	void draw() { std::cout << "Draw line\n"; }
+	void draw();
 };
 #endif LINE_H

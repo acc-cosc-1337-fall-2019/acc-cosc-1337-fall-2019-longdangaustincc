@@ -6,6 +6,8 @@
 #include "line.h"
 #include "circle.h"
 
+using std::cout;
+
 int main() 
 {
 	//Shape s_abtract; can't create instance; pure virtual

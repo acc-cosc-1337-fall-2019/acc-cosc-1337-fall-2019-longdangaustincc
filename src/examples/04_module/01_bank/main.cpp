@@ -1,17 +1,26 @@
+#include <functional>
 #include <iostream>
 #include <vector>
 #include "atm.h"
 #include "customer.h"
 #include "checking_account.h"
+#include "savings_account.h"
 
 using std::cout;
 using std::cin;
 using std::vector;
+using std::reference_wrapper;
 
 int main()
 {
-	CheckingAccount a(1500);
-	cout << a.get_balance();
+	CheckingAccount c(1500);
+	SavingsAccount s(500);
+	vector<reference_wrapper<BankAccount>> accounts{ c , s };
+
+	for (auto act : accounts)
+	{
+		cout << "Balance: " << act.get().get_balance() << "\n";
+	}
 
 	return 0;
 }

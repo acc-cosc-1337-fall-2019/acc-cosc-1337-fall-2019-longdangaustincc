@@ -12,7 +12,6 @@ Return quotient.
 */
 double get_gc_content(const string & dna)
 {
-	double dna_length = dna.length();
 	double gc_count = 0;
 
 	for (int i = 0; i < dna.length(); ++i)
@@ -22,7 +21,7 @@ double get_gc_content(const string & dna)
 			++gc_count;
 		}
 	}
-	return gc_count / dna_length;
+	return gc_count / dna.length();
 }
 
 /*
